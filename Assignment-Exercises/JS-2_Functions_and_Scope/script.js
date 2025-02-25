@@ -3,7 +3,8 @@
  - Create two global variables (e.g., globalVar, anotherGlobalVar).
  - Assign any values you like.
 ********************/
-
+let globalVar = "sekai";
+let anotherGlobalVar = "isekai";
 
 /********************
  Step 2: Create a Function to Demonstrate Function Scope
@@ -13,7 +14,11 @@
    2. Log both the global variable(s) and the local variable to the console.
    3. Return a string that includes both the global and local variables.
 ********************/
-
+function demoFunctionScope() {
+  let localVar = 10;
+  console.log(globalVar, anotherGlobalVar, localVar)
+  return 
+}
 
 /********************
  Step 3: Call the Function and Log Its Return Value
