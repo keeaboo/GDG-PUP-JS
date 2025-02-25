@@ -16,9 +16,12 @@ let anotherGlobalVar = "isekai";
 ********************/
 function demoFunctionScope() {
   let localVar = 10;
-  console.log(globalVar, anotherGlobalVar, localVar)
-  return 
+  console.log("log inside function: " + globalVar + " " + anotherGlobalVar + " " + localVar);
+  return (globalVar + " " + anotherGlobalVar + " " + localVar);
 }
+
+// error
+// console.log(localVar);
 
 /********************
  Step 3: Call the Function and Log Its Return Value
@@ -26,6 +29,9 @@ function demoFunctionScope() {
  - Use console.log() to display the return value in the console.
 ********************/
 
+let result = demoFunctionScope();
+console.log("log function return value: " + demoFunctionScope());
+console.log("log result: " + result);
 
 /********************
  Step 4: Demonstrate Block Scope
@@ -35,3 +41,11 @@ function demoFunctionScope() {
    2. Log the block-scoped variable within the block.
  - Try logging the same variable outside the block and observe what happens.
 ********************/
+
+if (true){
+  let blockVar = "block-scoped variable";
+  console.log(blockVar);
+}
+
+// error
+// console.log(blockVar);
